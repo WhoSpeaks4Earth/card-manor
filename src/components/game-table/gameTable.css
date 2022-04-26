@@ -1,0 +1,16 @@
+
+.game-table {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.board-container {
+    flex: 3;
+}
+
+.side-panel {
+    flex: 1;
+}

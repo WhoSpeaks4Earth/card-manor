@@ -5,7 +5,7 @@ import './layout.css';
 export const Layout = (props: { children: ReactNode}) => {
 
     return (
-        <div className="layout-container">
+        <div className="layout">
             {props.children}
         </div>
     )

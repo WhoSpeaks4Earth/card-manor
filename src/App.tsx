@@ -1,12 +1,11 @@
+import { GameTable } from './components/game-table/GameTable';
 import { Layout } from './components/layout/Layout';
-import { MainContent } from './components/layout/MainContent';
+
 
 function App() {
   return (
     <Layout>
-      <MainContent>
-        hi!
-      </MainContent>
+      <GameTable />
     </Layout>
   );
 }
