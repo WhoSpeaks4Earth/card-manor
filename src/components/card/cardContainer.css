@@ -1,10 +1,11 @@
 
 .card-container {
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dashed red;
-    height: 30px;
-    width: 30px;
+    border: 1px dashed lavender;
+    height: 200px;
+    width: 150px;
     margin: 2px;
 }

@@ -1,10 +1,51 @@
 
 .card {
     background-color: aliceblue;
+    border-radius: 12px;
+    font-size: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30px;
-    width: 30px;
-    box-shadow: 5px 5px 10px -3px #000000;
+    height: 200px;
+    width: 150px;
+    min-width: 150px;
+    -webkit-box-shadow: 5px 5px 15px -3px #000000; 
+    box-shadow: 5px 5px 15px -3px #000000;
+    overflow: hidden;
+}
+
+.back {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Franklin Gothic Lighter', 'Arial Narrow', Arial, sans-serif;
+    font-size: .7em;
+    font-weight: lighter;
+    margin: .8em;
 }

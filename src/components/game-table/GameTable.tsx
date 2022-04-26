@@ -60,6 +60,8 @@ export const GameTable = () => {
     return board.findIndex(cell => cell === null);
   }
 
+  const sampleCard: ICard = {title: 'Sun', ranks: [2,10,10,3]}
+
   return (
     <div className="game-table">
       <div className="side-panel">
@@ -68,7 +70,7 @@ export const GameTable = () => {
       </div>
 
       <div className="board-container">
-        {state.board.map((cell, i) => <div key={i}>{cell ? <CardContainer><Card /></CardContainer> : <CardContainer />}</div>)}
+        {state.board.map((cell, i) => <div key={i}>{cell ? <CardContainer><Card {...cell} /></CardContainer> : <CardContainer />}</div>)}
       </div>
 
       <div className="side-panel">
