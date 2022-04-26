@@ -1,6 +1,7 @@
 
 .game-table {
     display: flex;
+    align-items: center;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -9,8 +10,17 @@
 
 .board-container {
     flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .side-panel {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    height: 100%;
 }
