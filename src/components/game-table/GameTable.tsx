@@ -9,11 +9,9 @@ import "./gameTable.css"
 
 const getCardHand = (cards: ICard[], size: number): ICard[] => {
   const hand: ICard[] = [];
-
   for (let i = 0; i < size; i++) {
     hand.push(cards[i]);
   }
-
   return hand;
 }
 
@@ -60,21 +58,29 @@ export const GameTable = () => {
     return board.findIndex(cell => cell === null);
   }
 
-  const sampleCard: ICard = {title: 'Sun', ranks: [2,10,10,3]}
+  const renderBoardCell = (placedCard: null | ICard) => {
+    const content = placedCard ? <Card {...placedCard} /> : null;
+    return <CardContainer>{content}</CardContainer>;
+  }
+
+  const renderCardInHand = (card: null | ICard) => {
+    const content = card ? <Card {...card} /> : null;
+    return <CardContainer>{content}</CardContainer>;
+  }
 
   return (
     <div className="game-table">
       <div className="side-panel">
-      <div>{state.opponentHand.map(card => card?.title)}</div>
+        {state.opponentHand.map((card, i) => <div key={i}>{renderCardInHand(card)}</div>)}
         <button onClick={() => onClick('opponentHand')}>Play Card</button>
       </div>
 
       <div className="board-container">
-        {state.board.map((cell, i) => <div key={i}>{cell ? <CardContainer><Card {...cell} /></CardContainer> : <CardContainer />}</div>)}
+        {state.board.map((placedCard, i) => <div key={i}>{renderBoardCell(placedCard)}</div>)}
       </div>
 
       <div className="side-panel">
-        <div>{state.playerHand.map(card => card?.title)}</div>
+      {state.playerHand.map((card, i) => <div key={i}>{renderCardInHand(card)}</div>)}
         <button onClick={() => onClick('playerHand')}>Play Card</button>
       </div>
     </div>
