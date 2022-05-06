@@ -5,3 +5,7 @@ export interface ICard {
     title: string,
     ranks: ranks
 }
+
+export interface IGameCard extends ICard {
+    isPlayerCard: boolean
+}

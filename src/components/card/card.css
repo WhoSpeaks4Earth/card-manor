@@ -1,6 +1,11 @@
 
+
+.player > .card {
+    background-color: blue;
+}
+
+
 .card {
-    background-color: aliceblue;
     border-radius: 12px;
     font-size: 26px;
     display: flex;

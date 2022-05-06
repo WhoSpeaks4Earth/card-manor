@@ -1,6 +1,6 @@
 import { ICard } from "../../models/ICard";
-import "./card.css";
 import { CardRanks } from "./CardRanks";
+import "./card.css";
 
 export const Card = (props: ICard) => {
 
